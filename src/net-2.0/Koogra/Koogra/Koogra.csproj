@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5FC18C05-8CC2-4E29-B746-1CA3C5D6F50D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Net.SourceForge.Koogra</RootNamespace>
+    <AssemblyName>Net.SourceForge.Koogra</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SignAssembly>false</SignAssembly>
+    <DelaySign>true</DelaySign>
+    <AssemblyOriginatorKeyFile>koogra.public.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Net.SourceForge.Koogra.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.Utils.Zip, Version=1.3.0.0, Culture=neutral, PublicKeyToken=c551e179877da246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\lib\Ionic.Utils.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Collections\IndexedCollection.cs" />
+    <Compile Include="Collections\ReadOnlyCollection.cs" />
+    <Compile Include="Collections\SimpleCollection.cs" />
+    <Compile Include="Excel2007\A1Translator.cs" />
+    <Compile Include="Excel2007\Cell.cs" />
+    <Compile Include="Excel2007\CellMap.cs" />
+    <Compile Include="Excel2007\OX\OXBuiltInFormats.cs" />
+    <Compile Include="Excel2007\OX\OXCell.cs" />
+    <Compile Include="Excel2007\OX\OXCellType.cs" />
+    <Compile Include="Excel2007\OX\OXFormattedString.cs" />
+    <Compile Include="Excel2007\OX\OXNS.cs" />
+    <Compile Include="Excel2007\OX\OXNumberFormat.cs" />
+    <Compile Include="Excel2007\OX\OXNumberFormatCollection.cs" />
+    <Compile Include="Excel2007\OX\OXRelation.cs" />
+    <Compile Include="Excel2007\OX\OXRelationCollection.cs" />
+    <Compile Include="Excel2007\OX\OXRow.cs" />
+    <Compile Include="Excel2007\OX\OXSST.cs" />
+    <Compile Include="Excel2007\OX\OXSSTEntry.cs" />
+    <Compile Include="Excel2007\OX\OXStyleSheet.cs" />
+    <Compile Include="Excel2007\OX\OXWorkbook.cs" />
+    <Compile Include="Excel2007\OX\OXWorkbookWorksheetEntry.cs" />
+    <Compile Include="Excel2007\OX\OXWorksheet.cs" />
+    <Compile Include="Excel2007\OX\OXXf.cs" />
+    <Compile Include="Excel2007\OX\OXXfCollection.cs" />
+    <Compile Include="Excel2007\Row.cs" />
+    <Compile Include="Excel2007\Workbook.cs" />
+    <Compile Include="Excel2007\Worksheet.cs" />
+    <Compile Include="Excel2007\WorksheetChild.cs" />
+    <Compile Include="Excel\Cell.cs" />
+    <Compile Include="Excel\CellCollection.cs" />
+    <Compile Include="Excel\ExcelCollection.cs" />
+    <Compile Include="Excel\ExcelIndexedCollection.cs" />
+    <Compile Include="Excel\ExcelObject.cs" />
+    <Compile Include="Excel\Font.cs" />
+    <Compile Include="Excel\FontCollection.cs" />
+    <Compile Include="Excel\Format.cs" />
+    <Compile Include="Excel\FormatCollection.cs" />
+    <Compile Include="Excel\HyperLinkCollection.cs" />
+    <Compile Include="Excel\IExcelObject.cs" />
+    <Compile Include="Excel\Palette.cs" />
+    <Compile Include="Excel\PaletteEntry.cs" />
+    <Compile Include="Excel\Records\ArrayRecord.cs" />
+    <Compile Include="Excel\Records\Biff.cs" />
+    <Compile Include="Excel\Records\BiffCollection.cs" />
+    <Compile Include="Excel\Records\BlankRecord.cs" />
+    <Compile Include="Excel\Records\BofRecord.cs" />
+    <Compile Include="Excel\Records\BoolErrRecord.cs" />
+    <Compile Include="Excel\Records\BoundSheetRecord.cs" />
+    <Compile Include="Excel\Records\CellRecord.cs" />
+    <Compile Include="Excel\Records\ContinueRecord.cs" />
+    <Compile Include="Excel\Records\DbCellRecord.cs" />
+    <Compile Include="Excel\Records\EofRecord.cs" />
+    <Compile Include="Excel\Records\FontRecord.cs" />
+    <Compile Include="Excel\Records\FormatRecord.cs" />
+    <Compile Include="Excel\Records\FormulaChildRangedRecord.cs" />
+    <Compile Include="Excel\Records\FormulaChildRecord.cs" />
+    <Compile Include="Excel\Records\FormulaRecord.cs" />
+    <Compile Include="Excel\Records\GenericBiff.cs" />
+    <Compile Include="Excel\Records\HyperLinkOptions.cs" />
+    <Compile Include="Excel\Records\HyperLinkRecord.cs" />
+    <Compile Include="Excel\Records\IndexRecord.cs" />
+    <Compile Include="Excel\Records\InvalidRecordIdException.cs" />
+    <Compile Include="Excel\Records\LabelRecord.cs" />
+    <Compile Include="Excel\Records\LabelSstRecord.cs" />
+    <Compile Include="Excel\Records\MulBlankRecord.cs" />
+    <Compile Include="Excel\Records\MulRkRecord.cs" />
+    <Compile Include="Excel\Records\MultipleColCellRecord.cs" />
+    <Compile Include="Excel\Records\NumberRecord.cs" />
+    <Compile Include="Excel\Records\PaletteRecord.cs" />
+    <Compile Include="Excel\Records\RecordType.cs" />
+    <Compile Include="Excel\Records\RkRec.cs" />
+    <Compile Include="Excel\Records\RkRecord.cs" />
+    <Compile Include="Excel\Records\RowColXfCellRecord.cs" />
+    <Compile Include="Excel\Records\RowRecord.cs" />
+    <Compile Include="Excel\Records\SharedFormulaRecord.cs" />
+    <Compile Include="Excel\Records\SingleColCellRecord.cs" />
+    <Compile Include="Excel\Records\SstRecord.cs" />
+    <Compile Include="Excel\Records\StringValueRecord.cs" />
+    <Compile Include="Excel\Records\TableRecord.cs" />
+    <Compile Include="Excel\Records\XfRecord.cs" />
+    <Compile Include="Excel\Row.cs" />
+    <Compile Include="Excel\RowCollection.cs" />
+    <Compile Include="Excel\Style.cs" />
+    <Compile Include="Excel\StyleCollection.cs" />
+    <Compile Include="Excel\ValueTypes\BoolErrValue.cs" />
+    <Compile Include="Excel\ValueTypes\FillPattern.cs" />
+    <Compile Include="Excel\ValueTypes\FontBoldness.cs" />
+    <Compile Include="Excel\ValueTypes\FontCharacterSet.cs" />
+    <Compile Include="Excel\ValueTypes\FontEscape.cs" />
+    <Compile Include="Excel\ValueTypes\FontFamily.cs" />
+    <Compile Include="Excel\ValueTypes\FontOptions.cs" />
+    <Compile Include="Excel\ValueTypes\FontUnderline.cs" />
+    <Compile Include="Excel\ValueTypes\FormulaValue.cs" />
+    <Compile Include="Excel\ValueTypes\HorizontalAlignment.cs" />
+    <Compile Include="Excel\ValueTypes\LineStyle.cs" />
+    <Compile Include="Excel\ValueTypes\Nibble.cs" />
+    <Compile Include="Excel\ValueTypes\ParentStyleAttributes.cs" />
+    <Compile Include="Excel\ValueTypes\RkValue.cs" />
+    <Compile Include="Excel\ValueTypes\Rotation.cs" />
+    <Compile Include="Excel\ValueTypes\RowHeight.cs" />
+    <Compile Include="Excel\ValueTypes\RowOptionFlags.cs" />
+    <Compile Include="Excel\ValueTypes\SheetType.cs" />
+    <Compile Include="Excel\ValueTypes\TypeAndProtection.cs" />
+    <Compile Include="Excel\ValueTypes\Version.cs" />
+    <Compile Include="Excel\ValueTypes\VerticalAlignment.cs" />
+    <Compile Include="Excel\ValueTypes\VisibilityType.cs" />
+    <Compile Include="Excel\Workbook.cs" />
+    <Compile Include="Excel\Worksheet.cs" />
+    <Compile Include="Excel\WorksheetCollection.cs" />
+    <Compile Include="ICell.cs" />
+    <Compile Include="IRow.cs" />
+    <Compile Include="IRows.cs" />
+    <Compile Include="IWorksheets.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IWorkbook.cs" />
+    <Compile Include="IWorksheet.cs" />
+    <Compile Include="Storage\CompoundFile.cs" />
+    <Compile Include="Storage\Directory.cs" />
+    <Compile Include="Storage\DirectoryEntry.cs" />
+    <Compile Include="Storage\DirectoryEntryFactory.cs" />
+    <Compile Include="Storage\DirectoryEntryNameComparer.cs" />
+    <Compile Include="Storage\GenericDirectoryEntry.cs" />
+    <Compile Include="Storage\Sectors\Constants.cs" />
+    <Compile Include="Storage\Sectors\DeColor.cs" />
+    <Compile Include="Storage\Sectors\DifSector.cs" />
+    <Compile Include="Storage\Sectors\DirectorySector.cs" />
+    <Compile Include="Storage\Sectors\DirectorySectorEntry.cs" />
+    <Compile Include="Storage\Sectors\DirectorySectorEntryCollection.cs" />
+    <Compile Include="Storage\Sectors\FatSector.cs" />
+    <Compile Include="Storage\Sectors\HeaderSector.cs" />
+    <Compile Include="Storage\Sectors\MiniFatSector.cs" />
+    <Compile Include="Storage\Sectors\Sect.cs" />
+    <Compile Include="Storage\Sectors\Sector.cs" />
+    <Compile Include="Storage\Sectors\SectorCollection.cs" />
+    <Compile Include="Storage\Sectors\Sid.cs" />
+    <Compile Include="Storage\Sectors\Stgty.cs" />
+    <Compile Include="Storage\Sectors\StorageSector.cs" />
+    <Compile Include="Storage\StorageEntry.cs" />
+    <Compile Include="Storage\StreamEntry.cs" />
+    <Compile Include="Text\Reader.cs" />
+    <Compile Include="WorkbookFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="changeLog.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="koogra.public.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

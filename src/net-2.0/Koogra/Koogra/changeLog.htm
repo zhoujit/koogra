@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Koogra Change Log</title>
+</head>
+<body>
+	<h1>
+		Koogra Change Log</h1>
+	<h2>
+		3.0 Beta</h2>
+	<ul>
+		<li>Added Excel 2007 and .Net 3.5 Build</li>
+		<li>Changed indexers on Excel 97 CellCollection and RowCollection classes to Int32.</li>
+	</ul>
+	<h2>
+		2.0.2</h2>
+	<ul>
+		<li>Suppressed exception on unknown URL moniker GUIDs</li>
+	</ul>
+	<h2>
+		2.0.1</h2>
+	<ul>
+		<li>A bug exists when RK values with decimals. Fix was contributed by Jose Flores (foreverjdev)
+		</li>
+	</ul>
+	<h2>
+		2.0.0</h2>
+	<ul>
+		<li>Ported to .Net 2.0</li>
+	</ul>
+	<h2>
+		1.1.5</h2>
+	<ul>
+		<li>A bug exists when reading excel files with a COUNTRY record inserted before a worksheet's
+			INDEX record. This has been corrected. This bug was found by Chris Bell.</li>
+	</ul>
+	<h2>
+		1.1.4</h2>
+	<ul>
+		<li>Incorporated a patch from Chris Bell for the PaletteEntry.GetColor method to enhance
+			a lazy fix to a previous issue.</li>
+		<li>Incorporate a fix by macro187 for a Japanese Character issue found by Jennifer Wen.
+			macro187's fix also takes care of issues related to reading past RTF and Far East
+			character extra information for SST records that are in the continue record.</li>
+	</ul>
+	<h2>
+		1.1.3</h2>
+	<ul>
+		<li>A bug exists when reading floating point RK records. This bug was found by Daniel
+			Rusk. A fix was also proposed by Daniel Rusk and is incorporated in this release.</li>
+	</ul>
+	<h2>
+		1.1.2</h2>
+	<ul>
+		<li>A bug exists when reading BOOLERR values. This bug was also found by Chris Bell.
+			This has been corrected.</li>
+	</ul>
+	<h2>
+		1.1.1</h2>
+	<ul>
+		<li>Shared string table strings with far east data was being read incorrectly. Thanks
+			to Wilson Chan for giving a test file and finding the bug.</li>
+	</ul>
+	<h2>
+		1.1.0</h2>
+	<ul>
+		<li>Added the GetFormattedValue method to the Cell class.</li>
+		<li>When using the path based constructor of the Workbook class, The file may now be
+			opened even if the file is opened by other applications for full read write access.
+			Contributed by Chris Bell.</li>
+		<li>A bug exists in initializing the Palette where some Palette entries could be null.
+			This bug was also found by Chris Bell. Behavior has been set to just stop initializing
+			the Palette if the condition occurs.</li>
+		<li>A condition could occur when loading some compound files where there is a Stream
+			that appears to be broken. The previous behavior would cause the load to fail. This
+			has been modified to continue the load even if such a condition occurs.</li>
+		<li>An NUnit class library has been added for regression testing bugs. This can be enhanced
+			in the future to also test methods but for this release, will be limited to issue
+			regression testing.</li>
+	</ul>
+	<h2>
+		1.0.1</h2>
+	<ul>
+		<li>Changed the Koogra.Worksheet.GetByName method to search for a name in a case insensitive
+			fashion
+			<li>Added the ReadSimpleASCIIString method to the Koogra.Text.Reader class
+				<li>Changed the method ReadSimpleString to ReadSimpleUnicodeString in Koogra.Text.Reader
+					to distinguish between Unicode and Ascii string streams
+					<li>Added support for HLINK records
+						<li>Added support for HyperLink tables
+							<li>Added the HyperLinks property to the Koogra.Excel.Worksheet class which corresponds
+								to each Worksheet's hyperlink table</li>
+	</ul>
+	<h2>
+		1.0.0</h2>
+	<ul>
+		<li>Initial Release</li>
+	</ul>
+</body>
+</html>
