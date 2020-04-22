@@ -82,9 +82,19 @@ namespace Net.SourceForge.Koogra.Excel2007
             if (r == null)
                 throw new Exception(string.Format("Relationship id {0} does not exist in the relationships for worksheet name {1}", e.RelationId, e.Name));
 
+            string subPath = r.Target.Replace('/', '\\');
+            string path = null;
+            if (subPath.StartsWith(@"\xl"))
+            {
+                path = subPath.Substring(1);
+            }
+            else
+            {
+                path = @"xl\" + subPath;
+            }
             OXWorksheet ows = OXNS.Load<OXWorksheet>(
                 _f,
-                @"xl\" + r.Target.Replace('/', '\\')
+                path
             );
 
             if (ows == null)

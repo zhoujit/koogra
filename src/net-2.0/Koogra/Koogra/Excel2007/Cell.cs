@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Net.SourceForge.Koogra.Excel2007.OX;
+using System.Globalization;
 
 #pragma warning disable 1591
 
@@ -47,7 +48,7 @@ namespace Net.SourceForge.Koogra.Excel2007
                             break;
                         case OXCellType.Number:
                             _value = cell.Value;
-                            _typedValue = decimal.Parse(cell.Value);
+                            _typedValue = decimal.Parse(cell.Value, NumberStyles.Number | NumberStyles.AllowExponent);
                             break;
                         default:
                             _typedValue =
